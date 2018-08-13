@@ -15,7 +15,7 @@ describe('MongoBinaryDownload', () => {
     // $FlowFixMe
     du.httpDownload = jest.fn();
 
-    await du.download('https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.6.3.tgz');
+    await du.download('https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.1.tgz');
     expect(du.httpDownload).toHaveBeenCalledTimes(1);
     const callArg1 = du.httpDownload.mock.calls[0][0];
     expect(callArg1.agent).toBeUndefined();
@@ -28,7 +28,7 @@ describe('MongoBinaryDownload', () => {
     // $FlowFixMe
     du.httpDownload = jest.fn();
 
-    await du.download('https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.6.3.tgz');
+    await du.download('https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-4.0.1.tgz');
     expect(du.httpDownload).toHaveBeenCalledTimes(1);
     const callArg1 = du.httpDownload.mock.calls[0][0];
     expect(callArg1.agent).toBeDefined();

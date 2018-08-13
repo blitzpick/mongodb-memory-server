@@ -26,7 +26,7 @@ export default class MongoBinary {
       downloadDir = path.resolve(os.homedir(), '.mongodb-binaries'),
       platform = os.platform(),
       arch = os.arch(),
-      version = '3.4.4',
+      version = '4.0.1',
     } = opts;
 
     let debug;
@@ -37,7 +37,7 @@ export default class MongoBinary {
         debug = console.log.bind(null);
       }
     } else {
-      debug = (msg: string) => {}; // eslint-disable-line
+      debug = (msg: string) => { }; // eslint-disable-line
     }
 
     if (this.cache[version]) {
